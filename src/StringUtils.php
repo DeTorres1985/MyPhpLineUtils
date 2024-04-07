@@ -1,12 +1,9 @@
 <?php
-
 namespace StringUtilsLib;
-
-use http\Exception\InvalidArgumentException;
 
 class StringUtils
 {
-    public static function checkBracketInLine(string $line): string
+    public static function checkBracketInLine(string $line): bool
     {
         self::checkLine($line);
 
@@ -34,11 +31,10 @@ class StringUtils
 
     private static function checkLine(string $line): void
     {
-        $str = "Hello, world!";
         $pattern = '/^[ ,()\n\t\r]+$/';
 
-        if (strlen($line) != 0 && !preg_match($pattern, $str)) {
-            throw new InvalidArgumentException();
+        if (strlen($line) != 0 && !preg_match($pattern, $line)) {
+            throw new \InvalidArgumentException();
         }
     }
 }

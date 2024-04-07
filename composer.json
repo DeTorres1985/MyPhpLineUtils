@@ -12,7 +12,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Detorres1985\\Stringutilslib\\": "src/"
+            "StringUtilsLib\\": "src/"
         }
     },
     "authors": [
